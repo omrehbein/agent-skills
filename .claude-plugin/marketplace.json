@@ -1,0 +1,30 @@
+{
+  "name": "omrehbein-skills",
+  "owner": {
+    "name": "Osmar Maciel Rehbein",
+    "url": "https://github.com/omrehbein"
+  },
+  "metadata": {
+    "description": "Agent-agnostic Agent Skills (SKILL.md) by Osmar Maciel Rehbein",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ace-editor",
+      "description": "Find, read, replace and validate text in Ace code editors on any web page through the editor API instead of error-prone typing",
+      "version": "1.1.0",
+      "author": {
+        "name": "Osmar Maciel Rehbein",
+        "url": "https://github.com/omrehbein"
+      },
+      "homepage": "https://github.com/omrehbein/agent-skills/tree/main/skills/ace-editor",
+      "repository": "https://github.com/omrehbein/agent-skills",
+      "license": "MIT",
+      "keywords": ["ace", "code-editor", "browser-automation", "json", "aws-console"],
+      "category": "development",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/ace-editor"]
+    }
+  ]
+}

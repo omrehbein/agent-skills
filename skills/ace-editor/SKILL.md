@@ -164,6 +164,12 @@ await new Promise(resolve => {
 2. `useWorker: false` means the page validates elsewhere — check its linter or error gutter (`.ace_gutter-cell.ace_error`).
 3. Take a screenshot only to confirm UI state (error banners, enabled buttons), never as the source of the text.
 
+## Examples
+
+- *"Fix the JSON in the KMS key policy editor."* → Run the finder, pick the visible `ace/mode/json` editor, `JSON.parse(editor.getValue())` fails → rebuild the policy as an object, `editor.setValue(JSON.stringify(policy, null, editor.session.getTabString()), -1)`, wait for annotations (step 7), confirm the page shows no errors, then ask the user before saving.
+- *"Rename every `/v1/` endpoint to `/v2/` in the config editor."* → Finder, pick the editor by `label`, `editor.replaceAll('/v2/', { needle: '/v1/' })`, report the returned count and re-read the text to confirm.
+- *"What SQL is in the report editor?"* → Finder; with `handle: true` return `editor.getValue()`; with `handle: false` read the rendered rows (step 5) and say the result may be partial.
+
 ## Site notes
 
 - AWS console policy editors (IAM, KMS, S3, SCP): [references/aws-policy-editor.md](references/aws-policy-editor.md)

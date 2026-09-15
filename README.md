@@ -24,6 +24,13 @@ npx skills add omrehbein/agent-skills --skill ace-editor
 
 The CLI asks which agents to install to. Use `-a <agent>` to target one directly, `-g` for a user-level (global) install, and omit `--skill` to pick skills interactively.
 
+### As a Claude Code plugin
+
+```text
+/plugin marketplace add omrehbein/agent-skills
+/plugin install ace-editor@omrehbein-skills
+```
+
 ### Manually
 
 Copy the skill folder into your agent's skills directory — each client documents its location in the [Agent Skills client list](https://agentskills.io/clients). For example, Claude Code reads `~/.claude/skills/` (user) and `<project>/.claude/skills/` (project).
