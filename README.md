@@ -12,7 +12,7 @@ Each skill is a folder with a `SKILL.md`: a short frontmatter (`name`, `descript
 
 | Skill | What it does |
 | --- | --- |
-| [`ace-editor`](skills/ace-editor/SKILL.md) | Read, replace and fix text in Ace code editors during browser automation (AWS console policy editors, Cloudscape, react-ace) without the corruption caused by typing — via the editor API, with paste/clipboard fallbacks and verification steps. |
+| [`ace-editor`](skills/ace-editor/SKILL.md) | Find, read, replace and validate text in Ace code editors on any web page — shadow DOM and same-origin iframes included — through the editor API instead of error-prone typing, with fallbacks when the editor instance isn't reachable. Includes an API cheat sheet and site notes for AWS console policy editors. |
 
 ## Install
 
