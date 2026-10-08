@@ -13,13 +13,14 @@ Each skill is a folder with a `SKILL.md`: a short frontmatter (`name`, `descript
 | Skill | What it does |
 | --- | --- |
 | [`ace-editor`](skills/ace-editor/SKILL.md) | Find, read, replace and validate text in Ace code editors on any web page — shadow DOM and same-origin iframes included — through the editor API instead of error-prone typing, with fallbacks when the editor instance isn't reachable. Includes an API cheat sheet and site notes for AWS console policy editors. |
+| [`langflow-pilot`](skills/langflow-pilot/SKILL.md) | Pilot Langflow flows through the official LFX MCP server: create, inspect, configure, validate, run and debug them with component discovery, evidence-based verification and safeguards for destructive operations. |
 
 ## Install
 
 ### With the `skills` CLI (any agent)
 
 ```bash
-npx skills add omrehbein/agent-skills --skill ace-editor
+npx skills add omrehbein/agent-skills --skill <skill-name>
 ```
 
 The CLI asks which agents to install to. Use `-a <agent>` to target one directly, `-g` for a user-level (global) install, and omit `--skill` to pick skills interactively.
@@ -28,7 +29,7 @@ The CLI asks which agents to install to. Use `-a <agent>` to target one directly
 
 ```text
 /plugin marketplace add omrehbein/agent-skills
-/plugin install ace-editor@omrehbein-skills
+/plugin install <skill-name>@omrehbein-skills
 ```
 
 ### Manually
@@ -37,12 +38,12 @@ Copy the skill folder into your agent's skills directory — each client documen
 
 ```bash
 git clone https://github.com/omrehbein/agent-skills.git
-cp -r agent-skills/skills/ace-editor <your-agent-skills-dir>/
+cp -r agent-skills/skills/<skill-name> <your-agent-skills-dir>/
 ```
 
 ## Usage
 
-Nothing to wire up: the agent loads a skill on its own when your request matches the skill's description. Agents that expose skills as commands also let you call one explicitly (e.g. `/ace-editor`).
+Nothing to wire up: the agent loads a skill on its own when your request matches the skill's description. Agents that expose skills as commands also let you call one explicitly (e.g. `/langflow-pilot`).
 
 ## Compatibility
 
