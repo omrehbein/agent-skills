@@ -27,21 +27,21 @@
       "skills": ["./skills/ace-editor"]
     },
     {
-      "name": "langflow-pilot",
+      "name": "langflow-lfx-mcp",
       "description": "Create, inspect, configure, validate, run and debug Langflow flows through the official LFX MCP server",
       "version": "1.0.0",
       "author": {
         "name": "Osmar Maciel Rehbein",
         "url": "https://github.com/omrehbein"
       },
-      "homepage": "https://github.com/omrehbein/agent-skills/tree/main/skills/langflow-pilot",
+      "homepage": "https://github.com/omrehbein/agent-skills/tree/main/skills/langflow-lfx-mcp",
       "repository": "https://github.com/omrehbein/agent-skills",
       "license": "MIT",
       "keywords": ["langflow", "lfx", "mcp", "flows", "ai-agents"],
       "category": "development",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/langflow-pilot"]
+      "skills": ["./skills/langflow-lfx-mcp"]
     }
   ]
 }
