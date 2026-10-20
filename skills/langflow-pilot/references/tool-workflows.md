@@ -34,7 +34,7 @@ If names collide, require or resolve the UUID. Never infer a target solely from 
 
 Use create_flow_from_spec(spec, validate=true) after discovering every component and port. Validation is enabled by default, so do not immediately repeat validate_flow unless later changes occurred or independent revalidation is required. On failure it attempts to remove the partial flow, but still reconcile with list_flows before retrying.
 
-For stepwise construction use create_flow, add_component, configure_component, connect_components, layout_flow, validate_flow, and run_flow when authorized. Call notify_done only when the completed stepwise series needs UI settlement.
+For stepwise construction use create_flow, add_component, configure_component, connect_components, layout_flow, validate_flow, run_flow, then notify_done.
 
 Use list_starter_projects and use_starter_project when a published starter closely matches the request; inspect and rename the resulting copy.
 
@@ -77,7 +77,7 @@ batch runs supported actions sequentially and supports $N.field references to ea
 
 ## Completion evidence
 
-For any mutation, report the flow name and UUID, operations completed, validation result and exact remaining errors, observable output when run, and backup identity for broad changes. For completed stepwise edits on an existing flow, also report the notify_done result when that tool was needed; do not call it after deleting the flow or when a full-spec operation already emitted settlement. Do not report persisted changes from runtime-only tweaks, and do not report UI refresh as proof of graph correctness.
+For any mutation, report the flow name and UUID, operations completed, validation result and exact remaining errors, observable output when run, backup identity for broad changes, and notify_done result. Do not report persisted changes from runtime-only tweaks, and do not report UI refresh as proof of graph correctness.
 
 ## Official sources
 

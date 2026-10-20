@@ -1,9 +1,9 @@
 ---
-name: langflow-lfx-mcp
+name: langflow-pilot
 description: "Use when an AI agent must create, inspect, edit, validate, run, debug, duplicate, rename, export, or safely delete flows on a running Langflow instance through the official LFX MCP server; when configuring the lfx-mcp stdio server; or when component types, ports, fields, tool-mode connections, build failures, or flow execution need discovery and verification."
 ---
 
-# Manage Langflow with LFX MCP
+# Pilot Langflow with LFX MCP
 
 Use the official LFX MCP server to manage flows through Langflow's API. This skill is independently authored from the [official documentation](https://docs.langflow.org/lfx-mcp); it is not an official Langflow skill.
 
@@ -39,7 +39,7 @@ There is no standalone `lfx-mcp` package on PyPI; the binary ships in the `lfx` 
 3. Duplicate first for rollback when the requested change is broad or risky. Use export only for redacted inspection, versioning, or sanitized sharing.
 4. Apply only required edits with configure_component, component tools, and connection tools.
 5. Use update_flow_from_spec only for deliberate full replacement. Duplicate first when rollback matters; export is redacted and is suitable only for inspection, versioning, or sanitized sharing.
-6. Validate, re-read, and optionally run. After a completed stepwise edit sequence on an existing flow, call notify_done when UI settlement is needed; do not call it after deletion or when a full-spec operation already emitted settlement.
+6. Validate, re-read, optionally run, then notify_done with a factual summary.
 
 ### Debug and run
 
